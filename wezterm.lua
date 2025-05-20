@@ -15,23 +15,6 @@ config = {
 	font_size = 11,
 }
 
-config.keys = {
-	{
-		key = "h",
-		action = wezterm.action.SplitHorizontal({ domain = "CurrentPaneDomain" }),
-	},
-	{
-		key = "v",
-		mods = "LEADER|SHIFT",
-		action = wezterm.action.SplitVertical({ domain = "CurrentPaneDomain" }),
-	},
-	{
-		key = "a",
-		mods = "LEADER|CTRL",
-		action = wezterm.action.SendKey({ key = "A", mods = "CTRL" }),
-	},
-}
-
 config.colors = {
 	tab_bar = {
 		background = "#0b0022",
@@ -56,6 +39,14 @@ config.colors = {
 			bg_color = "#1b1032",
 			fg_color = "#808080",
 		},
+	},
+}
+
+config.keys = {
+	{
+		key = "n",
+		mods = "SHIFT|CTRL",
+		action = wezterm.action.ToggleFullScreen,
 	},
 }
 
